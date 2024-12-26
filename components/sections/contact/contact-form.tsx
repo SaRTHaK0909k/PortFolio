@@ -10,19 +10,15 @@ import "react-toastify/dist/ReactToastify.css"; // Import the CSS for the toast
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
 
     try {
       const response = await fetch("/api/contact", {
@@ -30,7 +26,7 @@ export function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       const result = await response.json();
@@ -41,6 +37,13 @@ export function ContactForm() {
 
       // Show success toast
       toast.success(result.message || "Message sent successfully!");
+
+      // Reset the form data after successful submission
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error: any) {
       console.error("Error submitting form:", error);
       // Show error toast
@@ -50,24 +53,44 @@ export function ContactForm() {
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-4">
-          <Input name="name" type="text" placeholder="Name" required />
-          <Input name="email" type="email" placeholder="Email" required />
+          <Input
+            name="name"
+            type="text"
+            value={formData.name}
+            onChange={handleInputChange}
+            placeholder="Name"
+            required
+          />
+          <Input
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            placeholder="Email"
+            required
+          />
           <Textarea
             name="message"
+            value={formData.message}
+            onChange={handleInputChange}
             placeholder="Your message"
             className="min-h-[150px]"
             required
           />
         </div>
-        <Button
-          type="submit"
-          className="w-full"
-          disabled={isSubmitting}
-        >
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
           {isSubmitting ? (
             "Sending..."
           ) : (
