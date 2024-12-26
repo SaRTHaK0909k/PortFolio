@@ -16,9 +16,9 @@ export function Contact() {
         </div>
 
         <Card className="p-8">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-row-2 gap-12">
             <ContactForm />
-            <SocialLinks />
+            {/* <SocialLinks /> */}
           </div>
         </Card>
       </div>

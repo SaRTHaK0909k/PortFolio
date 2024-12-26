@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send } from "lucide-react";
+import { toast, ToastContainer } from "react-toastify"; // Import ToastContainer and toast
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for the toast
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,41 +39,47 @@ export function ContactForm() {
         throw new Error(result.error || "Something went wrong");
       }
 
-      alert(result.message || "Message sent successfully!");
+      // Show success toast
+      toast.success(result.message || "Message sent successfully!");
     } catch (error: any) {
       console.error("Error submitting form:", error);
-      alert(error.message || "An error occurred while sending the message.");
+      // Show error toast
+      toast.error(error.message || "An error occurred while sending the message.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="space-y-4">
-        <Input name="name" type="text" placeholder="Name" required />
-        <Input name="email" type="email" placeholder="Email" required />
-        <Textarea
-          name="message"
-          placeholder="Your message"
-          className="min-h-[150px]"
-          required
-        />
-      </div>
-      <Button
-        type="submit"
-        className="w-full"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? (
-          "Sending..."
-        ) : (
-          <>
-            Send Message
-            <Send className="ml-2 h-4 w-4" />
-          </>
-        )}
-      </Button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="space-y-4">
+          <Input name="name" type="text" placeholder="Name" required />
+          <Input name="email" type="email" placeholder="Email" required />
+          <Textarea
+            name="message"
+            placeholder="Your message"
+            className="min-h-[150px]"
+            required
+          />
+        </div>
+        <Button
+          type="submit"
+          className="w-full"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            "Sending..."
+          ) : (
+            <>
+              Send Message
+              <Send className="ml-2 h-4 w-4" />
+            </>
+          )}
+        </Button>
+      </form>
+      {/* Toastify container component */}
+      <ToastContainer />
+    </>
   );
 }

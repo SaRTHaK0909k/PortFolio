@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Home } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export function Navbar() {
@@ -26,13 +26,23 @@ export function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-sm border-b">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Button 
-            variant="ghost" 
-            className="font-bold text-lg"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            SG
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-primary"
+            >
+              <Home className="h-5 w-5" />
+            </Button>
+            <Button 
+              variant="ghost" 
+              className="font-bold text-lg"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              SG
+            </Button>
+          </div>
 
           <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (

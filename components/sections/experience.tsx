@@ -18,9 +18,18 @@ export function Experience() {
               <Badge>March 2024 - May 2024</Badge>
             </div>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-              <li>Developed real-time comment system using WebSockets</li>
-              <li>Reduced load times by 50%</li>
-              <li>Improved user retention by 20%</li>
+              <li>
+                Developed a robust real-time comment system using WebSockets, which enabled users to engage in live discussions, enhancing user interaction and overall experience on the platform.
+              </li>
+              <br />
+              <li>
+                Successfully reduced page load times by 50% through the implementation of optimized code and efficient resource management, significantly improving user satisfaction and retention rates.
+              </li>
+              <br />
+              <li>
+                Contributed to a 20% increase in user retention by analyzing user feedback and iteratively improving features based on data-driven insights, fostering a more engaging user environment.
+              </li>
+              <br />
             </ul>
             <div className="flex flex-wrap gap-2">
               {["Astro.js", "Supabase", "Azure", "Docker", "Node.js", "React.js"].map((tech) => (

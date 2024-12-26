@@ -33,42 +33,56 @@ function AchievementCard({ title, icon, stats, description }: AchievementCardPro
 }
 
 export function Achievements() {
-  const competitiveAchievements = [
+  const achievements = [
+    // Hackathon Achievement
     {
-      title: "Codeforces Pupil",
-      icon: <Trophy className="h-7 w-7" />,
-      stats: "Max Rating: 1307",
-      description: "Achieved Pupil rank through consistent performance in competitive programming contests"
+      title: "Smart India Hackathon 2024",
+      icon: <Target className="h-7 w-7" />,
+      description: "Developed WebWhisper, an AI chatbot for the Department of Justice India."
     },
-    {
-      title: "Codechef 3 Star",
-      icon: <Star className="h-7 w-7" />,
-      stats: "Global Rank 23 in Div 4",
-      description: "Secured impressive rankings in multiple competitive programming contests"
-    },
+    // Problem Solving Achievement
     {
       title: "Problem Solving",
       icon: <Brain className="h-7 w-7" />,
       stats: "750+ Problems",
-      description: "Solved hundreds of problems across CodeForces, LeetCode, GeeksforGeeks, and more"
-    }
-  ];
-
-  const professionalAchievements = [
+      description: "Solved hundreds of problems across CodeForces, LeetCode, GeeksforGeeks, and more."
+    },
+    // Mentor Achievement
     {
-      title: "Smart India Hackathon 2024",
-      icon: <Target className="h-7 w-7" />,
-      description: "Developed WebWhisper, an AI chatbot for Department of Justice India"
+      title: "Mentor of Hackofiesta’24",
+      icon: <Users className="h-7 w-7" />,
+      description: "Mentored around 250 participants in the field of Web Development at Lucknow’s largest hackathon conducted by IIIT Lucknow."
+    },
+    // E-CELL Leadership
+    {
+      title: "Developers Lead @ E-CELL IIIT Lucknow",
+      icon: <Users className="h-7 w-7" />,
+      description: "Led a team of 30 people in developing major web projects for E-CELL."
+    },
+    // Competitive Achievements
+    {
+      title: "Pupil @ Codeforces",
+      icon: <Trophy className="h-7 w-7" />,
+      stats: "Max Rating: 1307",
+      description: "Achieved Pupil rank through consistent performance in competitive programming contests."
     },
     {
-      title: "Flipkart Grid 6.0",
-      icon: <Rocket className="h-7 w-7" />,
-      description: "Successfully qualified Level 1 of the prestigious nationwide competition"
+      title: "3 Star @ CodeChef",
+      icon: <Star className="h-7 w-7" />,
+      stats: "Global Rank 23 in Div 4",
+      description: "Secured impressive rankings in multiple competitive programming contests."
     },
+    // Certification Achievement
     {
       title: "Google Cloud Certified",
       icon: <Award className="h-7 w-7" />,
-      description: "Achieved Google Cloud Practitioner certification demonstrating cloud expertise"
+      description: "Achieved Google Cloud Practitioner certification demonstrating cloud expertise."
+    },
+    // Flipkart Competition
+    {
+      title: "Flipkart Grid 6.0",
+      icon: <Rocket className="h-7 w-7" />,
+      description: "Successfully qualified Level 1 of the prestigious nationwide competition."
     }
   ];
 
@@ -78,34 +92,14 @@ export function Achievements() {
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">Achievements</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of milestones from competitive programming to professional certifications
+            A collection of milestones from hackathons to competitive programming and professional certifications.
           </p>
         </div>
 
-        <div className="space-y-16">
-          <div className="space-y-8">
-            <div className="flex items-center gap-3">
-              <Code className="h-6 w-6" />
-              <h3 className="text-2xl font-semibold">Competitive Programming</h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {competitiveAchievements.map((achievement) => (
-                <AchievementCard key={achievement.title} {...achievement} />
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <div className="flex items-center gap-3">
-              <Users className="h-6 w-6" />
-              <h3 className="text-2xl font-semibold">Professional</h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {professionalAchievements.map((achievement) => (
-                <AchievementCard key={achievement.title} {...achievement} />
-              ))}
-            </div>
-          </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {achievements.map((achievement) => (
+            <AchievementCard key={achievement.title} {...achievement} />
+          ))}
         </div>
       </div>
     </section>

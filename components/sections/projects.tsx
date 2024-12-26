@@ -19,10 +19,10 @@ export function Projects() {
               </Button>
             </div>
             <p className="text-muted-foreground">
-              Security framework for school pick-ups using facial recognition and license plate scanning
+              Developed a robust security framework for school pick-ups that combines facial recognition technology with license plate scanning. This innovative solution resulted in an average reduction of 10 minutes in daily wait times for guardians, significantly enhancing the efficiency and safety of the pick-up process.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["React.js", "YoloV8", "FastAPI", "OpenCV"].map((tech) => (
+              {["React.js", "YoloV8", "FastAPI", "OpenCV", "TensorFlow", "Django", "PostgreSQL"].map((tech) => (
                 <Badge key={tech} variant="outline">
                   {tech}
                 </Badge>
@@ -37,10 +37,10 @@ export function Projects() {
               </Button>
             </div>
             <p className="text-muted-foreground">
-              Enhanced shopping experience generating precise lists of intermediate goods
+              Developed an innovative software solution that enhances the Walmart shopping experience by generating precise lists of intermediate goods for any finished product in single prompt. This solution streamlines the shopping process, increases customer convenience, and improves overall satisfaction by providing users with tailored recommendations based on their shopping habits.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["React Native", "Node.js", "TypeScript", "Gemini API"].map((tech) => (
+              {["React Native", "Node.js", "TypeScript", "Gemini API", "Express.js", "Neon", "Redux"].map((tech) => (
                 <Badge key={tech} variant="outline">
                   {tech}
                 </Badge>

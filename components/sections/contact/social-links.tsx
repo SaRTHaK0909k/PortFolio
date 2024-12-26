@@ -29,7 +29,7 @@ export function SocialLinks() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 m-auto">
       <h3 className="text-xl font-semibold">Connect With Me</h3>
       <div className="space-y-4">
         {socials.map((social) => (

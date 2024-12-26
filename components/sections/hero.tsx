@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown,FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface HeroProps {
@@ -31,6 +31,18 @@ export function Hero({ onScrollClick }: HeroProps) {
           <Button variant="outline" size="icon" asChild>
             <a href="mailto:sarthakganure123@gmail.com">
               <Mail className="h-5 w-5" />
+            </a>
+          </Button>
+        </div>
+        <div className="pt-4">
+          <Button 
+            variant="default"
+            className="gap-2"
+            asChild
+          >
+            <a href="https://drive.google.com/file/d/1it9cc0XOoXYqJq_y8w0JaQ1AFnt0lsSO/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <FileText className="h-4 w-4" />
+              View Resume
             </a>
           </Button>
         </div>
