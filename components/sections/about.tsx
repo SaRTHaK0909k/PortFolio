@@ -15,7 +15,7 @@ export function About() {
               Lucknow
             </p>
             <p className="text-lg text-muted-foreground">
-              CGPA - 8.5 
+              CGPA - 8.2
             </p>
             <div className="space-y-2">
               

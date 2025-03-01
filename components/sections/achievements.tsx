@@ -44,8 +44,8 @@ export function Achievements() {
     {
       title: "Problem Solving",
       icon: <Brain className="h-7 w-7" />,
-      stats: "750+ Problems",
-      description: "Solved hundreds of problems across CodeForces, LeetCode, GeeksforGeeks, and more."
+      stats: "1000+ Problems",
+      description: "Solved hundreds of problems across  LeetCode, CodeForces, GeeksforGeeks and more."
     },
     // Mentor Achievement
     {
@@ -67,7 +67,7 @@ export function Achievements() {
       description: "Achieved Pupil rank through consistent performance in competitive programming contests."
     },
     {
-      title: "3 Star @ CodeChef",
+      title: "4 Star @ CodeChef",
       icon: <Star className="h-7 w-7" />,
       stats: "Global Rank 23 in Div 4",
       description: "Secured impressive rankings in multiple competitive programming contests."

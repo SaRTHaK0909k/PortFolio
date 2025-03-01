@@ -19,14 +19,16 @@ export function Projects() {
               </Button>
             </div>
             <p className="text-muted-foreground">
-              Developed a robust security framework for school pick-ups that combines facial recognition technology with license plate scanning. This innovative solution resulted in an average reduction of 10 minutes in daily wait times for guardians, significantly enhancing the efficiency and safety of the pick-up process.
+            Built an AI-powered accessibility tool enabling 2.68 crore disabled Indians to navigate the web using
+natural language, bypassing barriers from 97.4% of non-WCAG-compliant websites. Developed an AI-driven HTML
+interaction pipeline and integrated Whisper, ElevenLabs, and Google AI for seamless voice-driven web operations.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["React.js", "YoloV8", "FastAPI", "OpenCV", "TensorFlow", "Django", "PostgreSQL"].map((tech) => (
+                {["Next.js", "Google Gemini 2.0", "Node.js", "Selenium", "TypeScript", "Prisma", "Transformers.js", "Kinde"].map((tech) => (
                 <Badge key={tech} variant="outline">
                   {tech}
                 </Badge>
-              ))}
+                ))}
             </div>
           </Card>
           <Card className="p-6 space-y-4">
