@@ -8,7 +8,7 @@ export function Skills() {
     {
       title: "Languages",
       icon: <Code2 className="h-5 w-5" />,
-      skills: ["C++", "Go", "C", "Java", "Python", "SQL", "JavaScript"]
+      skills: ["C++", "Go", "C", "Java", "Python", "SQL", "JavaScript", "Bash/Shell"]
     },
     {
       title: "Academic Courses",
@@ -57,6 +57,23 @@ export function Skills() {
         "Google Cloud"
       ]
     },
+    // ▶ New category highlighting Flipkart internship tech
+    {
+      title: "Data Engineering & Monitoring (Flipkart)",
+      icon: <Cpu className="h-5 w-5" />,
+      skills: [
+        "Azkaban (Scheduler)",
+        "Metabase (BI)",
+        "Nagios (Monitoring)",
+        "Zenduty (On-call)",
+        "GCP Monitoring & Alerting",
+        "Logrotate (Memory/Log Management)",
+        "Medallion Architecture (Lakehouse)",
+        "Data Reconciliation & Validation",
+        "Checkpointing & Seekback (Auto-recovery)",
+        "Incident Response / On-call Operations"
+      ]
+    },
     {
       title: "Frameworks & Tools",
       icon: <Cpu className="h-5 w-5" />,
@@ -71,7 +88,7 @@ export function Skills() {
         "React",
         "Excel",
         "Git",
-        "Kubernetes"
+        "Kubernetes",
       ]
     }
   ];
