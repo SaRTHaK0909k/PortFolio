@@ -40,7 +40,7 @@ export function Hero({ onScrollClick }: HeroProps) {
             className="gap-2"
             asChild
           >
-            <a href="https://drive.google.com/file/d/1CrQANldPBN1G14bulCLoJOEcXcbMJKAB/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1V6nl9x-LgcZBwfSqnEhHZIhoxmhN1nn4/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4" />
               View Resume
             </a>
